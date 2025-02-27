@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from io import StringIO
+from io import BytesIO
 from csv_to_ics import csv_to_ics
 
 class TestCsvToIcs(unittest.TestCase):
@@ -12,12 +12,15 @@ class TestCsvToIcs(unittest.TestCase):
 John,Doe,1990-05-15
 Jane,Smith,1992-07-20
 """
+        mock_open.return_value.__enter__.return_value = BytesIO(csv_data.encode('utf-8'))  
 
-        mock_open.return_value.__enter__.return_value = StringIO(csv_data)
+        mock_open.return_value.__enter__.return_value.write = MagicMock()
 
         csv_to_ics('contacts.csv', 'geburtstage.ics')
 
         self.assertEqual(mock_add_component.call_count, 2)
+
+        mock_open.return_value.__enter__.return_value.write.assert_called_once()
 
 if __name__ == "__main__":
     unittest.main()
