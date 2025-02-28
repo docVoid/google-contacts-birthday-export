@@ -39,6 +39,10 @@ To export your Google Contacts to a CSV file with birthdays, follow these steps:
 4. Select the calendar to which you'd like to add the birthdays.
 5. Click **Import**, and all the birthdays will be added as recurring events in your Google Calendar.
 
+## Important Note
+- If you edit the exported csv file of your contacts, the script may be not working.
+- The script only works if the full date of birth (yyyy-mm-dd) is stored.
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
