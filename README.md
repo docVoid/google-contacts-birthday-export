@@ -16,7 +16,7 @@ To export your Google Contacts to a CSV file with birthdays, follow these steps:
 
 1. Open [Google Contacts](https://contacts.google.com).
 2. On the left sidebar, click on **Export**.
-3. Choose **Google CSV** as the export format. This will include your contacts' details such as name, email, and birthday.
+3. Choose **Google CSV** as the export format. This will include your contacts details such as name, email, and birthday.
 4. Click **Export**, and the CSV file will be downloaded to your computer.
 
 ## How to Run the Script
