@@ -18,7 +18,7 @@ Jane,Smith,1992-07-20
 
         mock_open.return_value.__enter__.return_value.write = MagicMock()
 
-        csv_to_ics('contacts.csv', 'geburtstage.ics')
+        csv_to_ics('contacts.csv', 'birthdays.ics')
 
         self.assertEqual(mock_add_component.call_count, 2)
 

@@ -28,4 +28,4 @@ def csv_to_ics(csv_file, ics_file):
     print(f'ICS-Datei gespeichert als {ics_file}')
 
 if __name__ == "__main__":
-    csv_to_ics('contacts.csv', 'geburtstage.ics') # Change to your filepath
+    csv_to_ics('contacts.csv', 'birthdays.ics') # Change to your filepath
